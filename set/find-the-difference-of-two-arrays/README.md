@@ -1,34 +1,45 @@
-# Description
+# 2215. Find the Difference of Two Arrays
+
+## Description
 See https://leetcode.com/problems/container-with-most-water/description/
 
 ## Problem
-You are given an integer array height of length `n`. There are `n` vertical lines drawn such that the two endpoints of the ith line are `(i, 0)` and `(i, height[i])`.
+Given two 0-indexed integer arrays `nums1` and `nums2`, return a list `answer` of size `2` where:
 
-Find two lines that together with the x-axis form a container, such that the container contains the most water.
+* `answer[0]` is a list of all distinct integers in `nums1` which are not present in `nums2`.
+* `answer[1]` is a list of all distinct integers in `nums2` which are not present in `nums1`.
 
-Return the maximum amount of water a container can store.
-
-Notice that you may not slant the container.
+Note that the integers in the lists may be returned in any order.
 
 ## Example 1
 
 ```
-Input: height = [1,8,6,2,5,4,8,3,7]
-Output: 49
+Input: nums1 = [1,2,3], nums2 = [2,4,6]
+Output: [[1,3],[4,6]]
 ```
-Explanation: The above vertical lines are represented by array `[1,8,6,2,5,4,8,3,7]`. In this case, the max area of water (blue section) the container can contain is `49`.
+
+Explanation:
+
+For `nums1`, `nums1[1] = 2` is present at index `0` of `nums2`, whereas `nums1[0] = 1` and `nums1[2] = 3` are not present in `nums2`. Therefore, `answer[0] = [1,3]`.
+
+For `nums2`, `nums2[0] = 2` is present at index `1` of `nums1`, whereas `nums2[1] = 4` and `nums2[2] = 6` are not present in `nums2`. Therefore, `answer[1] = [4,6]`.
 
 ## Example 2
 
 ```
-Input: height = [1,1]
-Output: 1
+Input: nums1 = [1,2,3,3], nums2 = [1,1,2,2]
+Output: [[3],[]]
 ```
+
+Explanation:
+
+For `nums1`, `nums1[2]` and `nums1[3]` are not present in `nums2`. Since `nums1[2] == nums1[3]`, their value is only included once and `answer[0] = [3]`.
+
+Every integer in `nums2` is present in `nums1`. Therefore, `answer[1] = []`.
 
 ## Constraints
 
 ```
-n == height.length
-2 <= n <= 105
-0 <= height[i] <= 104
+1 <= nums1.length, nums2.length <= 1000
+-1000 <= nums1[i], nums2[i] <= 1000
 ```

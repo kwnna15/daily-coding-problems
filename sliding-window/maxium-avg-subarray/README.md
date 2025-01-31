@@ -1,4 +1,6 @@
-# Description
+# 643. Maximum Average Subarray I
+
+## Description
 See https://leetcode.com/problems/maximum-average-subarray-i/description/
 
 ## Problem
