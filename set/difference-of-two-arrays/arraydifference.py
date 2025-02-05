@@ -1,7 +1,7 @@
 import sys
 
 
-def findDifference(nums1: list[int], nums2: list[int]) -> list[list[int]]:
+def array_difference(nums1: list[int], nums2: list[int]) -> list[list[int]]:
     set1 = set(nums1)
     set2 = set(nums2)
     ans1 = []
@@ -21,4 +21,4 @@ def findDifference(nums1: list[int], nums2: list[int]) -> list[list[int]]:
 if __name__ == "__main__":
     nums1 = list(map(int, sys.argv[1].split(",")))
     nums2 = list(map(int, sys.argv[2].split(",")))
-    print(findDifference(nums1, nums2))
+    print(array_difference(nums1, nums2))

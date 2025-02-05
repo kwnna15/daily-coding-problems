@@ -1,7 +1,7 @@
 import sys
 
 
-def uniqueOccurrences(arr: list[int]) -> bool:
+def unique_occurrences(arr: list[int]) -> bool:
     occurrences = {}
     for k in arr:
         occurrences[k] = occurrences.get(k, 0) + 1
@@ -11,4 +11,4 @@ def uniqueOccurrences(arr: list[int]) -> bool:
 
 if __name__ == "__main__":
     arr = list(map(int, sys.argv[1].split(",")))
-    print(uniqueOccurrences(arr))
+    print(unique_occurrences(arr))

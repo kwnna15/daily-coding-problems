@@ -1,7 +1,7 @@
 import sys
 
 
-def sumToK(list, k):
+def sum_to_k(list, k):
     seen = {}
     for i in list:
         seenValue = seen.get(k - i)
@@ -14,4 +14,4 @@ def sumToK(list, k):
 if __name__ == "__main__":
     list = numbers = [int(num) for num in sys.argv[1].split(",")]
     k = int(sys.argv[2])
-    print(sumToK(list, k))
+    print(sum_to_k(list, k))

@@ -2,7 +2,7 @@ import sys
 from math import gcd
 
 
-def reverseWords(s: str) -> str:
+def reverse_words(s: str) -> str:
     word = ""
     reverse = ""
     for i in range(0, len(s)):
@@ -30,4 +30,4 @@ def reverseWords(s: str) -> str:
 
 if __name__ == "__main__":
     s = sys.argv[1]
-    print(reverseWords(s))
+    print(reverse_words(s))

@@ -2,7 +2,7 @@ import sys
 from math import gcd
 
 
-def gcdOfStrings(str1: str, str2: str) -> str:
+def gcd_strings(str1: str, str2: str) -> str:
     if str1 + str2 != str2 + str1:
         return ""
 
@@ -13,4 +13,4 @@ def gcdOfStrings(str1: str, str2: str) -> str:
 if __name__ == "__main__":
     str1 = sys.argv[1]
     str2 = sys.argv[2]
-    print(gcdOfStrings(str1, str2))
+    print(gcd_strings(str1, str2))

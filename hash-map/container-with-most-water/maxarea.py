@@ -1,7 +1,7 @@
 import sys
 
 
-def maxArea(heights: list[int]) -> int:
+def max_area(heights: list[int]) -> int:
     left = 0
     right = len(heights) - 1
     maxArea = 0
@@ -19,4 +19,4 @@ def maxArea(heights: list[int]) -> int:
 
 if __name__ == "__main__":
     list = numbers = [int(num) for num in sys.argv[1].split(",")]
-    print(maxArea(list))
+    print(max_area(list))

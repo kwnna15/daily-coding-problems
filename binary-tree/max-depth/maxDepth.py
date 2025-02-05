@@ -7,10 +7,10 @@ class TreeNode:
         self.right = right
 
 
-def maxDepth(root: TreeNode) -> int:
+def max_depth(root: TreeNode) -> int:
     if not root:
         return 0
-    return max(maxDepth(root.left), maxDepth(root.right)) + 1
+    return max(max_depth(root.left), max_depth(root.right)) + 1
 
 
 if __name__ == "__main__":
@@ -19,4 +19,4 @@ if __name__ == "__main__":
     left = TreeNode(None, None)
     right = TreeNode(rightleft, rightright)
     root = TreeNode(left, right)
-    print(maxDepth(root))
+    print(max_depth(root))
