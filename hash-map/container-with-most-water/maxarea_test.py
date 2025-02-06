@@ -1,4 +1,3 @@
-import pytest
 from maxarea import max_area
 
 

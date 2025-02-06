@@ -1,4 +1,3 @@
-import pytest
 from sumtok import sum_to_k
 
 

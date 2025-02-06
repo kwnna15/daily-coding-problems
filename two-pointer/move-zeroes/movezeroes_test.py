@@ -1,4 +1,3 @@
-import pytest
 from movezeroes import move_zeroes
 
 

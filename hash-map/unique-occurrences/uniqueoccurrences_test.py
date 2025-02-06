@@ -1,4 +1,3 @@
-import pytest
 from uniqueoccurrences import unique_occurrences
 
 

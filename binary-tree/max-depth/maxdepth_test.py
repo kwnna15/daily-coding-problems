@@ -1,4 +1,3 @@
-import pytest
 from maxdepth import max_depth, TreeNode
 
 

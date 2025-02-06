@@ -1,4 +1,3 @@
-import pytest
 from reversewords import reverse_words
 
 

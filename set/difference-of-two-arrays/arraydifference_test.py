@@ -1,4 +1,3 @@
-import pytest
 from arraydifference import array_difference
 
 

@@ -1,4 +1,3 @@
-import pytest
 from gcdstrings import gcd_strings
 
 

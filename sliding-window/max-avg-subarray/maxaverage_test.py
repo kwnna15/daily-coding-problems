@@ -1,4 +1,3 @@
-import pytest
 from maxaverage import max_average
 
 
