@@ -2,13 +2,13 @@ import sys
 
 
 def sum_to_k(list, k):
-    seen = {}
+    visited = {}
     for i in list:
-        seenValue = seen.get(k - i)
-        if seen.get(k - i) != None:
-            return [i, seenValue]
+        val = visited.get(k - i)
+        if visited.get(k - i) != None:
+            return [i, val]
         else:
-            seen[i] = i
+            visited[i] = i
 
 
 if __name__ == "__main__":

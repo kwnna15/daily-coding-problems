@@ -4,17 +4,17 @@ import sys
 def max_area(heights: list[int]) -> int:
     left = 0
     right = len(heights) - 1
-    maxArea = 0
+    max_area = 0
     while left <= right:
         height = min(heights[right], heights[left])
         length = right - left
         area = height * length
-        maxArea = max(maxArea, area)
+        max_area = max(max_area, area)
         if heights[right] > heights[left]:
             left += 1
         else:
             right -= 1
-    return maxArea
+    return max_area
 
 
 if __name__ == "__main__":
