@@ -1,6 +1,3 @@
-import sys
-
-
 class TreeNode:
     def __init__(self, left=None, right=None):
         self.left = left
