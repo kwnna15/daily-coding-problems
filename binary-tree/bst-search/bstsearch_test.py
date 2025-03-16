@@ -1,4 +1,4 @@
-from searchbst import TreeNode, Solution
+from bstsearch import TreeNode, Solution
 
 
 def test_example_1():
