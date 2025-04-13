@@ -1,45 +1,51 @@
-# 2215. Find the Difference of Two Arrays
+# 1657. Determine if Two Strings Are Close
 
 ## Description
-See https://leetcode.com/problems/container-with-most-water/description/
+See https://leetcode.com/problems/determine-if-two-strings-are-close/description/
 
 ## Problem
-Given two 0-indexed integer arrays `nums1` and `nums2`, return a list `answer` of size `2` where:
+Two strings are considered close if you can attain one from the other using the following operations:
 
-* `answer[0]` is a list of all distinct integers in `nums1` which are not present in `nums2`.
-* `answer[1]` is a list of all distinct integers in `nums2` which are not present in `nums1`.
+* Operation 1: Swap any two existing characters.
+    * For example, `abcde -> aecdb`
+* Operation 2: Transform every occurrence of one existing character into another existing character, and do the same with the other character.
+    * For example, `aacabb -> bbcbaa` (all `a`'s turn into `b`'s, and all `b`'s turn into `a`'s)
+You can use the operations on either string as many times as necessary.
 
-Note that the integers in the lists may be returned in any order.
+Given two strings, `word1` and `word2`, return `true` if `word1` and `word2` are close, and `false` otherwise.
 
 ## Example 1
 
 ```
-Input: nums1 = [1,2,3], nums2 = [2,4,6]
-Output: [[1,3],[4,6]]
+Input: word1 = "abc", word2 = "bca"
+Output: true
+Explanation: You can attain word2 from word1 in 2 operations.
+Apply Operation 1: "abc" -> "acb"
+Apply Operation 1: "acb" -> "bca"
 ```
-
-Explanation:
-
-For `nums1`, `nums1[1] = 2` is present at index `0` of `nums2`, whereas `nums1[0] = 1` and `nums1[2] = 3` are not present in `nums2`. Therefore, `answer[0] = [1,3]`.
-
-For `nums2`, `nums2[0] = 2` is present at index `1` of `nums1`, whereas `nums2[1] = 4` and `nums2[2] = 6` are not present in `nums2`. Therefore, `answer[1] = [4,6]`.
 
 ## Example 2
 
 ```
-Input: nums1 = [1,2,3,3], nums2 = [1,1,2,2]
-Output: [[3],[]]
+Input: word1 = "a", word2 = "aa"
+Output: false
+Explanation: It is impossible to attain word2 from word1, or vice versa, in any number of operations.
 ```
 
-Explanation:
+## Example 3
 
-For `nums1`, `nums1[2]` and `nums1[3]` are not present in `nums2`. Since `nums1[2] == nums1[3]`, their value is only included once and `answer[0] = [3]`.
-
-Every integer in `nums2` is present in `nums1`. Therefore, `answer[1] = []`.
+```
+Input: word1 = "cabbba", word2 = "abbccc"
+Output: true
+Explanation: You can attain word2 from word1 in 3 operations.
+Apply Operation 1: "cabbba" -> "caabbb"
+Apply Operation 2: "caabbb" -> "baaccc"
+Apply Operation 2: "baaccc" -> "abbccc"
+```
 
 ## Constraints
 
 ```
-1 <= nums1.length, nums2.length <= 1000
--1000 <= nums1[i], nums2[i] <= 1000
+1 <= word1.length, word2.length <= 105
+word1 and word2 contain only lowercase English letters.
 ```

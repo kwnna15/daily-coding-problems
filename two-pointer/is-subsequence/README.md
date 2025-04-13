@@ -1,27 +1,18 @@
-# 443. String Compression
+# 392. Is Subsequence
 
 ## Description
 See https://leetcode.com/problems/string-compression/description/
 
 ## Problem
-Given an array of characters `chars`, compress it using the following algorithm:
+Given two strings `s` and `t`, return `true` if `s` is a subsequence of `t`, or `false` otherwise.
 
-Begin with an empty string `s`. For each group of consecutive repeating characters in `chars`:
-
-If the group's length is `1`, append the character to `s`.
-Otherwise, append the character followed by the group's length.
-The compressed string `s` should not be returned separately, but instead, be stored in the input character array `chars`. Note that group lengths that are `10` or longer will be split into multiple characters in chars.
-
-After you are done modifying the input array, return the new length of the array.
-
-You must write an algorithm that uses only constant extra space.
+A subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., `"ace"` is a subsequence of `"abcde"` while `"aec"` is not).
 
 ## Example 1
 
 ```
-Input: chars = ["a","a","b","b","c","c","c"]
-Output: Return 6, and the first 6 characters of the input array should be: ["a","2","b","2","c","3"]
-Explanation: The groups are "aa", "bb", and "ccc". This compresses to "a2b2c3".
+Input: s = "abc", t = "ahbgdc"
+Output: true
 ```
 
 ## Example 2
@@ -35,14 +26,16 @@ Explanation: The only group is "a", which remains uncompressed since it's a sing
 ## Example 3
 
 ```
-Input: chars = ["a","b","b","b","b","b","b","b","b","b","b","b","b"]
-Output: Return 4, and the first 4 characters of the input array should be: ["a","b","1","2"].
-Explanation: The groups are "a" and "bbbbbbbbbbbb". This compresses to "ab12".
+Input: s = "axc", t = "ahbgdc"
+Output: false
 ```
 
 ## Constraints
 
 ```
-1 <= chars.length <= 2000
-chars[i] is a lowercase English letter, uppercase English letter, digit, or symbol.
+0 <= s.length <= 100
+0 <= t.length <= 104
+s and t consist only of lowercase English letters.
 ```
+
+**Follow up:** Suppose there are lots of incoming s, say s1, s2, ..., sk where k >= 109, and you want to check one by one to see if t has its subsequence. In this scenario, how would you change your code?
