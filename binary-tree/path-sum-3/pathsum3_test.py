@@ -1,4 +1,5 @@
-from pathsum import TreeNode, sum
+from pathsum3 import TreeNode, sum
+
 
 def test_example_1():
     root = TreeNode(3)
@@ -9,6 +10,7 @@ def test_example_1():
     root.right.right = TreeNode(5)
     assert sum(root, 7) == 2
 
+
 def test_example_2():
     root = TreeNode(3)
     root.left = TreeNode(3)
@@ -16,9 +18,11 @@ def test_example_2():
     root.left.right = TreeNode(2)
     assert sum(root, 6) == 1
 
+
 def test_example_3():
     root = TreeNode(1)
     assert sum(root, 1) == 1
+
 
 def test_example_4():
     root = TreeNode(2)
@@ -29,6 +33,7 @@ def test_example_4():
     root.right.left = TreeNode(6)
     root.right.right = TreeNode(7)
     assert sum(root, 12) == 1
+
 
 def test_example_5():
     root = TreeNode(3)
